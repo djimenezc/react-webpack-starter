@@ -3,21 +3,20 @@
   "version": "0.0.1",
   "author": {
     "name": "dd",
-    "url": "https://github.com/dqdinh/"
+    "url": "https://github.com/dqdinh/react-webpack-starter"
   },
   "engines": {
     "node": "0.10.x"
   },
   "private": true,
-  "author": "",
-  "homepage": "",
+  "author": "dd",
+  "homepage": "https://github.com/dqdinh",
   "devDependencies": {
     "chai": "^1.9.1",
     "css-loader": "*",
     "exports-loader": "*",
     "imports-loader": "*",
     "jade": "^1.9.0",
-    "jest-cli": "^0.2.1",
     "karma": "^0.12.23",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.4",
@@ -39,7 +38,7 @@
     "deps": "npm install --quiet --loglevel warn && ./node_modules/bower/bin/bower install --quiet",
     "upgrade": "./node_modules/npm-check-updates/bin/npm-check-updates -u &&  ./node_modules/bower/bin/bower update && npm test",
     "browsertest": "./node_modules/nightwatch/bin/nightwatch -e firefox,chrome",
-    "test": "jest",
+    "test": "karma",
     "dev": "npm run jade & npm run stylus",
     "prod": "npm run jade-prod & npm run stylus-prod",
     "jade": "jade --watch ./src/html/*.jade --pretty --out ./build",
