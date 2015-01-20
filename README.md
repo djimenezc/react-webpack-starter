@@ -66,4 +66,5 @@ Sources
 - https://github.com/kriasoft/react-starter-kit
 - https://github.com/glebm/gulp-webpack-react-bootstrap-sass-template
 - https://github.com/johnthethird/react-starter-template
+- http://substantial.com/blog/2014/11/11/test-driven-react-how-to-manually-mock-components/#why-not-jest
 
