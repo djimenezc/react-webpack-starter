@@ -10,18 +10,13 @@ The project is setup to use Bower and NPM
 Tests
 =
 
-Unit tests are run using Jest.
+Unit tests are run using Karma.
 
 ```
 > npm test
 ...
 
-Found 3 matching tests...
- PASS  __tests__/components/Breadcrumb-test.js (2.396s)
- PASS  __tests__/components/NavBar-test.js (2.473s)
- PASS  __tests__/components/LinkTo-test.js (3.064s)
-3 tests passed (3 total)
-Run time: 5.97s
+
 ```
 
 Development
