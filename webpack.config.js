@@ -1,37 +1,56 @@
-var path = require('path');
+/*
+ * Webpack development server configuration
+ *
+ * This file is set up for serving the webpak-dev-server, which will watch for changes and recompile as required if
+ * the subfolder /webpack-dev-server/ is visited. Visiting the root will not automatically reload.
+ */
+
+'use strict';
+
 var webpack = require('webpack');
 
-var appRoot = __dirname + "/src";
-var bowerRoot = __dirname + "/bower_components";
-var styleRoot = appRoot + "/assets/styles";
-
 module.exports = {
+  output: {
+    publicPath: '/assets/',
+    filename: 'main.jsx'
+  },
+
+  entry: [
+    'webpack/hot/only-dev-server',
+    './src/scripts/components/app.js'
+  ],
+
   cache: true,
 
   debug: true,
 
-  entry: [
-    appRoot + "/app.jsx"
-  ],
+  devtool: false,
 
-  output: {
-    path: './build',
-    filename: 'bundle.js',
-    chunkFilename: "[id].bundle.js"
+  stats: {
+    colors: true,
+    reasons: true
   },
+
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  }
 
   module: {
     loaders: [
       {
-        // required to write 'require('./style.css')'
+        test: /\.jsx$/,
+        loaders: 'react-hot!jsx-loader?harmony'
+      }, {
+        test: /\.styl$/,
+        loaders: 'style-loader!css-loader!stylus-loader'
+      }, {
         test: /\.css$/,
-        loaders: ['style', 'css']
+        loaders: 'style-loader!css-loader'
       }, {
-        // require raw html for partials
-        test: /\.html$/,
-        loader: 'raw'
+        test: /\.(png|jpg)$/,
+        loaders: 'url-loader!limit=8192'
       }, {
-        // required for bootstrap icons
+      // required for bootstrap icons
         test: /\.woff$/,
         loader: 'url?prefix=font/&limit=5000&mimetype=application/font-woff'
       }, {
@@ -43,47 +62,11 @@ module.exports = {
       }, {
         test: /\.svg$/,
         loader: 'file?prefix=font/'
-      }, {
-        test: /\.jsx$/,
-        loader: 'jsx-loader'
       }
     ],
 
-    // don't parse some dependencies to speed up build.
-    // can probably do this non-AMD/CommonJS deps
-    noParse: [
-      // path.join(bowerRoot, '/jquery'),
-      // path.join(bowerRoot, '/bootstrap')
+    plugins: [
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin()
     ]
-  },
-
-  resolve: {
-
-    alias: {
-      // bower: bowerRoot
-    },
-
-    extensions: [
-      '',
-      '.js',
-      '.css'
-    ],
-
-    root: appRoot
-  },
-
-  plugins: [
-    // bower.json resolving
-    // new webpack.ResolverPlugin([new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])], ["normal", "loader"]),
-
-    // disable dynamic requires
-    // new webpack.ContextReplacementPlugin(/.*$/, /a^/),
-
-    // new webpack.ProvidePlugin({
-    //   'angular': 'exports?window.angular!bower/angular'
-    // })
-
-  ],
-
-  devtool: 'eval'
 };

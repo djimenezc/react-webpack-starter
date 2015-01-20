@@ -1,4 +1,6 @@
-var React = require('react');
+// 'use strict';
+
+var React = require('react/addons');
 
 var ClickCounter = React.createClass({
   getInitialState: function() {
@@ -8,9 +10,9 @@ var ClickCounter = React.createClass({
   },
 
   onClick: function() {
-    this.setState({
+    return this.setState({
       numClicks: this.state.numClicks + 1
-    })
+    });
   },
 
   render: function() {

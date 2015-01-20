@@ -1,4 +1,6 @@
-var React = require('react');
+'use strict';
+
+var React = require('react/addons');
 
 var CheckboxWithLabel = React.createClass({
   getInitialState: function() {
@@ -8,7 +10,9 @@ var CheckboxWithLabel = React.createClass({
   },
 
   onChange: function() {
-    this.setState(isChecked: !this.state.isChecked)
+    return this.setState({
+      isChecked: !this.state.isChecked
+    });
   },
 
   render: function() {
@@ -16,10 +20,10 @@ var CheckboxWithLabel = React.createClass({
       <label>
         <input
           type="checkbox"
-          checked={@state.isChecked}
-          onChange={@onChange}
+          checked={this.state.isChecked}
+          onChange={this.onChange}
         />
-        {@state.isChecked ? @props.labelOn : @props.labelOff}
+        {this.state.isChecked ? this.props.labelOn : this.props.labelOff}
       </label>
     );
   }
