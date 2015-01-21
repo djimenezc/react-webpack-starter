@@ -52,8 +52,10 @@ Serving HTTP on 0.0.0.0 port 8000
 > open http://localhost:8000/
 ```
 
-Sources
+Sources of enlightenment
 =
+- https://github.com/rackt/react-router
+- https://github.com/rackt/react-a11y
 - https://github.com/petehunt/webpack-howto
 - http://gaearon.github.io/react-hot-loader/
 - https://github.com/shanewilson/react-webpack-example
@@ -61,5 +63,7 @@ Sources
 - https://github.com/kriasoft/react-starter-kit
 - https://github.com/glebm/gulp-webpack-react-bootstrap-sass-template
 - https://github.com/johnthethird/react-starter-template
-- http://substantial.com/blog/2014/11/11/test-driven-react-how-to-manually-mock-components/#why-not-jest
+- https://github.com/newtriks/generator-react-webpack
+- https://github.com/TYRONEMICHAEL/react-component-boilerplate
+- http://substantial.com/blog/2014/11/11/test-driven-react-how-to-manually-mock-components
 

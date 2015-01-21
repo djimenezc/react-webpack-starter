@@ -1,54 +1,49 @@
-/*
- * Webpack development server configuration
- *
- * This file is set up for serving the webpak-dev-server, which will watch for changes and recompile as required if
- * the subfolder /webpack-dev-server/ is visited. Visiting the root will not automatically reload.
- */
-
 'use strict';
 
 var webpack = require('webpack');
 
-module.exports = {
-  output: {
-    publicPath: '/assets/',
-    filename: 'main.jsx'
-  },
+var plugins = [
+  new webpack.DefinePlugin({
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+  })
+];
 
+if (process.env.COMPRESS) {
+  plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
+    })
+  );
+}
+
+module.exports = {
   entry: [
     'webpack/hot/only-dev-server',
-    './src/scripts/components/app.js'
+    './src/scripts/components/app.jsx'
   ],
 
-  cache: true,
-
-  debug: true,
-
-  devtool: false,
-
-  stats: {
-    colors: true,
-    reasons: true
+  output: {
+    path: './build/',
+    filename: 'main.js'
   },
-
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  }
 
   module: {
     loaders: [
       {
         test: /\.jsx$/,
-        loaders: 'react-hot!jsx-loader?harmony'
+        loader: 'jsx-loader?harmony',
+        exclude: /node_modules/
       }, {
         test: /\.styl$/,
-        loaders: 'style-loader!css-loader!stylus-loader'
+        loader: 'style-loader!css-loader!stylus-loader'
       }, {
         test: /\.css$/,
-        loaders: 'style-loader!css-loader'
+        loader: 'style-loader!css-loader'
       }, {
         test: /\.(png|jpg)$/,
-        loaders: 'url-loader!limit=8192'
+        loader: 'url-loader?limit=8192'
       }, {
       // required for bootstrap icons
         test: /\.woff$/,
@@ -64,9 +59,7 @@ module.exports = {
         loader: 'file?prefix=font/'
       }
     ],
+  },
 
-    plugins: [
-      new webpack.HotModuleReplacementPlugin(),
-      new webpack.NoErrorsPlugin()
-    ]
+  plugins: plugins
 };

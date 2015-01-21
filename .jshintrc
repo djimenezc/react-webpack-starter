@@ -1,26 +1,17 @@
 {
   "node": true,
-  "browser": true,
-  "esnext": true,
-  "bitwise": true,
-  "camelcase": false,
+  "boss": true,
   "curly": true,
-  "eqeqeq": true,
-  "immed": true,
-  "indent": 2,
-  "latedef": true,
-  "newcap": true,
-  "noarg": true,
-  "quotmark": "false",
-  "regexp": true,
-  "undef": true,
-  "unused": false,
-  "strict": true,
-  "trailing": true,
-  "smarttabs": true,
-  "white": true,
+  "devel": true,
+  "eqnull": true,
+  "expr": true,
+  "funcscope": true,
+  "globalstrict": true,
+  "loopfunc": true,
   "newcap": false,
-  "globals": {
-    "React": true
-  }
+  "noempty": true,
+  "nonstandard": true,
+  "sub": true,
+  "undef": true,
+  "unused": "vars"
 }
