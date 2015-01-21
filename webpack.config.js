@@ -20,8 +20,7 @@ if (process.env.COMPRESS) {
 
 module.exports = {
   entry: [
-    'webpack/hot/only-dev-server',
-    './src/scripts/components/app.jsx'
+    './components/App.jsx'
   ],
 
   output: {
@@ -35,6 +34,9 @@ module.exports = {
         test: /\.jsx$/,
         loader: 'jsx-loader?harmony',
         exclude: /node_modules/
+      }, {
+         test: require.resolve("react"),
+         loader: "expose?React"
       }, {
         test: /\.styl$/,
         loader: 'style-loader!css-loader!stylus-loader'
