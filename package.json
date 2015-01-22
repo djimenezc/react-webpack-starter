@@ -47,19 +47,20 @@
     "clean": "rm -rf ./node_modules/ ./bower_components/",
     "deps": "npm install --quiet --loglevel warn && ./node_modules/bower/bin/bower install --quiet",
     "upgrade": "./node_modules/npm-check-updates/bin/npm-check-updates -u &&  ./node_modules/bower/bin/bower update && npm test",
+
     "jade": "jade --watch ./html/*.jade --pretty --out ./build",
     "stylus": "stylus --watch ./styles/*.styl --out ./build",
     "browsertest": "./node_modules/nightwatch/bin/nightwatch -e firefox,chrome",
     "webpack": "NODE_ENV=development webpack ./components/App.jsx build/main.js --config webpack.config.js --progress --colors --watch",
+    "webpack-dev-server": "NODE_ENV=development webpack-dev-server ./components/App.jsx --content-base build/ --hot --config webpack.config.js --progress --colors --watch",
+
     "build": "npm run webpack & npm run jade & npm run stylus",
-    "dist": "npm test && npm run prod && npm run browsertest",
-    "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples",
+    "serve": "npm run webpack-dev-server & npm run jade & npm run stylus",
+
     "lint": "jsxhint --jsx-only components --exclude node_modules; true;",
     "karma": "./node_modules/karma/bin/karma start --single-run",
     "test": "npm run karma & npm run lint",
-    "dev": "npm run jade & npm run stylus",
-    "stage": "npm test && npm run build && npm run browsertest",
-    "prod": "npm run jade-prod & npm run stylus-prod",
+
     "stylus-prod": "stylus --watch ./src/styles/*.styl --out ./dist.",
     "jade-prod": "jade --watch ./src/html/*.jade --out ./dist"
   }

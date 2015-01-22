@@ -19,9 +19,7 @@ if (process.env.COMPRESS) {
 }
 
 module.exports = {
-  entry: [
-    './components/App.jsx'
-  ],
+  entry: ['webpack/hot/dev-server', './components/App.jsx'],
 
   output: {
     path: './build/',
