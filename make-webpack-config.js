@@ -4,39 +4,31 @@ var path = require("path");
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var loadersByExtension = require("./config/loadersByExtension");
-var joinEntry = require("./config/joinEntry");
 
 module.exports = function(options) {
   var entry = {
-    // second: reactEntry("Second"),
     main: reactEntry("main")
   };
+
   var loaders = {
-    "coffee": "coffee-redux-loader",
     "jsx": options.hotComponents ? ["react-hot-loader", "jsx-loader?harmony"] : "jsx-loader?harmony",
-    "json": "json-loader",
     // "js": {
     // loader: "6to5-loader",
     // include: path.join(__dirname, "app")
     // },
-    "json5": "json5-loader",
     "txt": "raw-loader",
     "png|jpg|jpeg|gif|svg": "url-loader?limit=10000",
     "woff": "url-loader?limit=100000",
     "ttf|eot": "file-loader",
-    "wav|mp3": "file-loader",
     "html": "html-loader",
-    "md|markdown": ["html-loader", "markdown-loader"],
+    "md|markdown": ["html-loader", "markdown-loader"]
   };
+
   var stylesheetLoaders = {
     "css": "css-loader",
-    "less": "css-loader!less-loader",
-    "styl": "css-loader!stylus-loader",
-    "sass": "css-loader!sass-loader",
+    "styl": "css-loader!stylus-loader"
   };
-  var additionalLoaders = [
-    // { test: /some-reg-exp$/, loader: "any-loader" }
-  ];
+
   var alias = {
 
   };
@@ -57,11 +49,17 @@ module.exports = function(options) {
 
   var output = {
     path: path.join(__dirname, "build", options.prerender ? "prerender" : "public"),
+
     publicPath: publicPath,
+
     filename: "[name].js" + (options.longTermCaching && !options.prerender ? "?[chunkhash]" : ""),
+
     chunkFilename: (options.devServer ? "[id].js" : "[name].js") + (options.longTermCaching && !options.prerender ? "?[chunkhash]" : ""),
+
     sourceMapFilename: "debugging/[file].map",
+
     libraryTarget: options.prerender ? "commonjs2" : undefined,
+
     pathinfo: options.debug,
   };
 
@@ -83,7 +81,6 @@ module.exports = function(options) {
       });
     }
   },
-
   new webpack.PrefetchPlugin("react"),
   new webpack.PrefetchPlugin("react/lib/ReactComponentBrowserEnvironment")
   ];
@@ -98,10 +95,10 @@ module.exports = function(options) {
     );
     plugins.push(new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }));
   }
+
   if(options.commonsChunk) {
     plugins.push(new webpack.optimize.CommonsChunkPlugin("commons", "commons.js" + (options.longTermCaching && !options.prerender ? "?[chunkhash]" : "")));
   }
-
 
   function reactEntry(name) {
     return (options.prerender ? "./config/prerender?" : "./config/app?") + name;
@@ -118,9 +115,11 @@ module.exports = function(options) {
       stylesheetLoaders[ext] = "style-loader!" + loaders;
     }
   });
+
   if(options.separateStylesheet && !options.prerender) {
     plugins.push(new ExtractTextPlugin("[name].css"));
   }
+
   if(options.minimize) {
     plugins.push(
       new webpack.optimize.UglifyJsPlugin(),
@@ -136,29 +135,40 @@ module.exports = function(options) {
 
   return {
     entry: entry,
+
     output: output,
+
     target: options.prerender ? "node" : "web",
+
     module: {
       loaders: loadersByExtension(loaders).concat(loadersByExtension(stylesheetLoaders))
     },
+
     devtool: options.devtool,
+
     debug: options.debug,
+
     resolveLoader: {
       root: path.join(__dirname, "node_modules"),
       alias: aliasLoader
     },
+
     externals: externals,
+
     resolve: {
       root: root,
       modulesDirectories: modulesDirectories,
       extensions: extensions,
       alias: alias,
     },
+
     plugins: plugins,
+
     devServer: {
       stats: {
         exclude: excludeFromStats
       }
     }
   };
+
 };

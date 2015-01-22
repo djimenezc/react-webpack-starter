@@ -4,12 +4,14 @@
 
 module.exports = function loadersByExtension(obj) {
   var loaders = [];
+
   var extensions = Object.keys(obj).map(function(key) {
     return key.split("|");
   }).reduce(function(arr, a) {
     arr.push.apply(arr, a);
     return arr;
   }, []);
+
   Object.keys(obj).forEach(function(key) {
     var exts = key.split("|");
     var value = obj[key];
