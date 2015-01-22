@@ -1,59 +1,44 @@
 Setup
 =
-
-The project is setup to use Bower and NPM
-
+Install npm packages and selenium server
 ```
 > npm run deps
 ```
 
 Tests
 =
-
 Unit tests are run using Karma.
-
 ```
-> npm test
+> npm run test
 ...
 
+End-to-End tests are run using Selenium.
+```
+> npm run selenium
+...
 
 ```
 
 Development
 =
-
-The development server is setup using Webpack
-
+Build js, css, and html.
 ```
-> npm start
-Environment Development
-...
-Starting Webpack Development Server
-Listening http://localhost:9000/webpack-dev-server/index.html
+> npm run build
+```
+
+Run webpack development server in hot mode.
+```
+> npm run serve
 ```
 
 Production
 =
-Webpack bundles all the assets in production mode and Gulp creates unique file names for caching
+TODO: add production steps
 
-```
-npm run dist
-...
-Found 3 matching tests...
-...
-Environment Production
-...
-Starting selenium server in parallel mode...
-...
-> cd dist
-> python -m SimpleHTTPServer
-Serving HTTP on 0.0.0.0 port 8000
-...
-> open http://localhost:8000/
-```
 
 Sources of enlightenment
 =
+- https://github.com/webpack/react-starter
 - https://github.com/rackt/react-router
 - https://github.com/rackt/react-a11y
 - https://github.com/petehunt/webpack-howto

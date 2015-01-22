@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="app-test"
+             errors="0"
+             failures="1"
+             tests="7">
+  
+  <testsuite errors="0" failures="1" hostname="" id=""
+    name="step one" package="app-test" skipped="5"
+    tests="7" time="" timestamp="">
+    
+    
+      <testcase name="Element &lt;body&gt; was visible after 65 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Timed out while waiting for element &lt;nav&gt; to be present for 1000 milliseconds.">
+        
+          <failure message="Expected &quot;visible&quot; but got: &quot;not found&quot;"></failure>
+        
+        
+          <system-out>
+            
+              [[ATTACHMENT|/Users/ddinh/workspace/learn/react-webpack-starter/tests/browser/reports/ERROR_Wed-Jan-21-2015-172903-GMT-0800.png]]
+            
+          </system-out>
+        
+      </testcase>
+    
+    
+    </testsuite>
+  
+</testsuites>
