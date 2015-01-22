@@ -1,38 +1,45 @@
 Setup
 =
+
 Install npm packages and selenium server
+
 ```
 > npm run deps
 ```
 
 Tests
 =
+
 Unit tests are run using Karma.
+
 ```
 > npm run test
-...
+```
 
 End-to-End tests are run using Selenium.
+
 ```
 > npm run selenium
-...
-
 ```
 
 Development
 =
+
 Build js, css, and html.
+
 ```
 > npm run build
 ```
 
 Run webpack development server in hot mode.
+
 ```
 > npm run serve
 ```
 
 Production
 =
+
 TODO: add production steps
 
 
