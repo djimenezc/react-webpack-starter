@@ -1,3 +1,5 @@
+// source -- https://github.com/webpack/react-starter
+
 "use strict";
 
 var path = require("path");
