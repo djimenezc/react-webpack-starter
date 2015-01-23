@@ -1,6 +1,3 @@
-React Webpack Starter
-=
-
 React with webpack demo.
 
 Setup
