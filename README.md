@@ -26,17 +26,16 @@ Run end-to-End tests
 > npm run selenium
 ```
 
-## Run Hot Module Replacement development server
+## Development
 
 ```
 # wait until this finishes.
-npm run hot-dev-server
+> npm run hot-dev-server
 
 # in new terminal
-npm run start-dev
+> npm run start-dev
 
-# open
-http://localhost:8080/
+> open http://localhost:8080/
 ```
 
 TODO: combine 'npm run hot-dev-server' and 'npm run start-dev' sequentially but
