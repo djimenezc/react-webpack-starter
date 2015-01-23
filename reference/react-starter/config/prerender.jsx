@@ -1,3 +1,4 @@
+// NOTE: currently not in use.
 // source -- https://github.com/webpack/react-starter
 
 "use strict";

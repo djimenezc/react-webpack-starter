@@ -49,17 +49,11 @@ module.exports = function(options) {
 
   var output = {
     path: path.join(__dirname, "build", options.prerender ? "prerender" : "public"),
-
     publicPath: publicPath,
-
     filename: "[name].js" + (options.longTermCaching && !options.prerender ? "?[chunkhash]" : ""),
-
     chunkFilename: (options.devServer ? "[id].js" : "[name].js") + (options.longTermCaching && !options.prerender ? "?[chunkhash]" : ""),
-
     sourceMapFilename: "debugging/[file].map",
-
     libraryTarget: options.prerender ? "commonjs2" : undefined,
-
     pathinfo: options.debug,
   };
 
@@ -100,10 +94,6 @@ module.exports = function(options) {
     plugins.push(new webpack.optimize.CommonsChunkPlugin("commons", "commons.js" + (options.longTermCaching && !options.prerender ? "?[chunkhash]" : "")));
   }
 
-  function reactEntry(name) {
-    return (options.prerender ? "./config/prerender?" : "./config/app?") + name;
-  }
-
   Object.keys(stylesheetLoaders).forEach(function(ext) {
     var loaders = stylesheetLoaders[ext];
     if(Array.isArray(loaders)) { loaders = loaders.join("!"); }
@@ -133,37 +123,31 @@ module.exports = function(options) {
     );
   }
 
+  function reactEntry(name) {
+    return (options.prerender ? "./config/prerender?" : "./config/app?") + name;
+  }
+
   return {
     entry: entry,
-
     output: output,
-
     target: options.prerender ? "node" : "web",
-
     module: {
       loaders: loadersByExtension(loaders).concat(loadersByExtension(stylesheetLoaders))
     },
-
     devtool: options.devtool,
-
     debug: options.debug,
-
     resolveLoader: {
       root: path.join(__dirname, "node_modules"),
       alias: aliasLoader
     },
-
     externals: externals,
-
     resolve: {
       root: root,
       modulesDirectories: modulesDirectories,
       extensions: extensions,
       alias: alias,
     },
-
     plugins: plugins,
-
     devServer: {
       stats: {
         exclude: excludeFromStats

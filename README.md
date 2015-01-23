@@ -1,43 +1,48 @@
+React Webpack Starter
+=
+
+React with webpack demo.
+
 Setup
 =
 
-Install npm packages and selenium server
-
+Install npm packages, install selenium-standalone server, mkdir 'build/'
 ```
 > npm run deps
 ```
 
-Tests
+Testing
 =
 
-Unit tests are run using Karma.
+Run tests
 
 ```
 > npm run test
 ```
 
-End-to-End tests are run using Selenium.
+Run end-to-End tests
 
 ```
 > npm run selenium
 ```
 
-Development
-=
-
-Build js, css, and html.
+## Run Hot Module Replacement development server
 
 ```
-> npm run build
+# wait until this finishes.
+npm run hot-dev-server
+
+# in new terminal
+npm run start-dev
+
+# open
+http://localhost:8080/
 ```
 
-Run webpack development server in hot mode.
+TODO: combine 'npm run hot-dev-server' and 'npm run start-dev' sequentially but
+still allow the first process to run in background.
 
-```
-> npm run serve
-```
-
-Production
+Production compilation and server
 =
 
 TODO: add production steps

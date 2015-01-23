@@ -1,6 +1,6 @@
 {
-  "node": true,
   "boss": true,
+  "browser": true,
   "curly": true,
   "devel": true,
   "eqnull": true,
@@ -9,6 +9,7 @@
   "globalstrict": true,
   "loopfunc": true,
   "newcap": false,
+  "node": true,
   "noempty": true,
   "nonstandard": true,
   "sub": true,

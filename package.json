@@ -1,11 +1,19 @@
 {
   "name": "react-webpack-starter",
-  "private": true,
   "version": "0.0.1",
-  "author": "dd",
+  "description": "Starter kit using React and Webpack.",
+  "author": "dave dinh @dqdinh",
+  "license": "MIT",
   "engines": {
     "node": "0.10.x"
   },
+  "keywords": [
+    "webpack",
+    "react",
+    "starter",
+    "boilerplate",
+    "hot"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:dqdinh/react-webpack-starter.git"
@@ -24,6 +32,7 @@
     "html-loader": "^0.2.3",
     "items-store": "^0.3.0",
     "jade": "^1.9.0",
+    "jade-loader": "^0.7.1",
     "jsx-loader": "^0.12.2",
     "jsxhint": "^0.8.1",
     "karma": "^0.12.28",
@@ -56,23 +65,14 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack --config webpack-production.config.js --progress --profile --colors",
     "clean": "rm -rf ./node_modules/",
-    "deps": "npm install --quiet --loglevel warn && ./node_modules/.bin/selenium-standalone install",
-    "dev-build": "npm run webpack & npm run jade & npm run stylus",
-    "dev-server": "./node_modules/.bin/webpack-dev-server --content-base config/dev-server-public --config webpack-dev-server.config.js --progress --colors --port 2992 --inline",
+    "deps": "npm install --quiet --loglevel warn && ./node_modules/.bin/selenium-standalone install && mkdir ./build/",
+    "upgrade": "./node_modules/npm-check-updates/bin/npm-check-updates -u && npm test",
     "hot-dev-server": "./node_modules/.bin/webpack-dev-server --content-base config/dev-server-public --config webpack-hot-dev-server.config.js --hot --progress --colors --port 2992 --inline",
-    "jade": "./node_modules/.bin/jade --watch ./html/*.jade --pretty --out ./build",
-    "jade-dist": "./node_modules/.bin/jade --watch ./html/*.jade --pretty --out ./dist",
+    "test": "npm run karma & npm run lint",
     "karma": "./node_modules/.bin/karma start --single-run",
     "lint": "./node_modules/.bin/jsxhint --jsx-only app --exclude node_modules; true;",
     "selenium": "./node_modules/.bin/nightwatch -e firefox,chrome",
-    "serve": "npm run webpack-dev-server & npm run jade & npm run stylus",
     "start": "node lib/server-production",
-    "start-dev": "node lib/server-development",
-    "stylus": "./node_modules/.bin/stylus --watch ./styles/*.styl --out ./build",
-    "stylus-dist": "./node_modules/.bin/stylus --watch ./styles/*.styl --out ./dist",
-    "test": "npm run karma & npm run lint",
-    "upgrade": "./node_modules/npm-check-updates/bin/npm-check-updates -u && npm test",
-    "webpack": "NODE_ENV=development ./node_modules/.bin/webpack ./app/App.jsx build/main.js --config webpack.config.js --progress --colors",
-    "webpack-dev-server": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server ./app/App.jsx --content-base build/ --hot --config webpack.config.js --progress --colors"
+    "start-dev": "node lib/server-development"
   }
 }
