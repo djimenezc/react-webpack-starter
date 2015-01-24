@@ -1,4 +1,4 @@
-# React with webpack demo.
+# React with webpack demos
 
 Goal is to learn React and Webpack via integration of existing demos into this
 project.
