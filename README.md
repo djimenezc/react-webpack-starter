@@ -25,6 +25,9 @@ Run end-to-End tests
 
 ## Development
 
+Static assets served from config/dev-server-public. It automatically recompiles when files are changed.
+
+First run only:
 ```
 # wait until this finishes.
 > npm run hot-dev-server
@@ -35,8 +38,12 @@ Run end-to-End tests
 > open http://localhost:8080/
 ```
 
-TODO: combine 'npm run hot-dev-server' and 'npm run start-dev' sequentially but
-still allow the first process to run in background.
+All subsequent runs:
+```
+> npm run dev
+> open http://localhost:8080/
+```
+
 
 Production compilation and server
 =
@@ -46,6 +53,7 @@ TODO: add production steps
 
 Sources of enlightenment
 =
+- https://github.com/callemall/material-ui
 - https://github.com/webpack/react-starter
 - https://github.com/rackt/react-router
 - https://github.com/rackt/react-a11y
