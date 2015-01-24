@@ -5,7 +5,7 @@ project.
 
 List of Demos
 =
-- Working mock of Material UI Documentations oage (https://github.com/callemall/material-ui)
+- Working mock of Material UI Documentations page (https://github.com/callemall/material-ui)
 
 Setup
 =
