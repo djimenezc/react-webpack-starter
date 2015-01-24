@@ -1,6 +1,6 @@
 # React with webpack demo.
 
-Goal is to learn React and Webpack by integration of existing demos into this
+Goal is to learn React and Webpack via integration of existing demos into this
 project.
 
 List of Demos
