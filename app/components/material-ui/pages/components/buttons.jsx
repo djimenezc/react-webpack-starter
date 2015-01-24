@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var FlatButton = mui.FlatButton;
 var FloatingActionButton = mui.FloatingActionButton;
 var RaisedButton = mui.RaisedButton;
@@ -9,13 +11,13 @@ var ButtonPage = React.createClass({
 
   render: function() {
 
-    var code = 
+    var code =
       '//Flat Buttons\n' +
       '<FlatButton label="Default" />\n' +
       '<FlatButton label="Primary" primary={true} />\n' +
       '<FlatButton label="Secondary" secondary={true} />\n' +
       '<FlatButton label="Disabled" disabled={true} />\n\n' +
-      '//Raised Buttons\n' + 
+      '//Raised Buttons\n' +
       '<RaisedButton label="Default" />\n' +
       '<RaisedButton label="Primary" primary={true} />\n' +
       '<RaisedButton label="Secondary" secondary={true} />\n' +

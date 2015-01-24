@@ -14,7 +14,7 @@ module.exports = React.createClass({
             <Link to="checkbox">Checkbox</Link>
           </li>
           <li>
-            <Link to="home">Material UI</Link>
+            <Link to="material-ui">Material UI</Link>
           </li>
         </ul>
         <p>Or try to switch to <Link to="some-page">some page</Link>.</p>

@@ -1,10 +1,12 @@
+"use strict";
+
 var React = require('react');
 
 var ColorsPage = React.createClass({
 
   render: function() {
     var mainColors = [
-        'Red', 'Pink', 'Purple', 'Deep Purple', 'Indigo', 'Blue', 'Light Blue', 
+        'Red', 'Pink', 'Purple', 'Deep Purple', 'Indigo', 'Blue', 'Light Blue',
         'Cyan', 'Teal', 'Green', 'Light Green', 'Lime', 'Yellow', 'Amber', 'Orange', 'Deep Orange'
       ],
       neutralColors = ['Brown', 'Blue Grey', 'Grey'],
@@ -65,7 +67,9 @@ var ColorsPage = React.createClass({
       colorText = '@' + colorClass,
       blockTitle;
 
-    if (colorTitle) blockTitle = <span className="name">{colorTitle}</span>;
+      if (colorTitle) {
+        blockTitle = <span className="name">{colorTitle}</span>;
+      }
 
     return (
       <li className={classes}>{blockTitle}{colorText}</li>

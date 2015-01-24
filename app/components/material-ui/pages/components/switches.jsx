@@ -1,16 +1,17 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var Checkbox = mui.Checkbox;
 var RadioButton = mui.RadioButton;
 var Toggle = mui.Toggle;
-var CodeExample = require('../../code-example/code-example.jsx');
 var ComponentDoc = require('../../component-doc.jsx');
 
 var SwitchesPage = React.createClass({
 
   render: function() {
 
-    var code = 
+    var code =
       '//Checkboxes\n' +
       '<Checkbox\n' +
       '  name="checkboxName1"\n' +
@@ -18,12 +19,12 @@ var SwitchesPage = React.createClass({
       '  label="went for a run today" />\n' +
       '<Checkbox\n' +
       '  name="checkboxName2"\n' +
-      '  value="checkboxValue2"\n' + 
+      '  value="checkboxValue2"\n' +
       '  label="fed the dog"\n' +
       '  defaultChecked={true} />\n' +
       '<Checkbox\n' +
       '  name="checkboxName3"\n' +
-      '  value="checkboxValue3"\n' + 
+      '  value="checkboxValue3"\n' +
       '  label="built a house on the moon"\n' +
       '  disabled={true} />\n\n' +
       '//Radio Buttons\n' +
@@ -49,7 +50,7 @@ var SwitchesPage = React.createClass({
       '  name="toggleName2"\n' +
       '  value="toggleValue2"\n' +
       '  label="auto-pilot"\n' +
-      '  defaultToggled={true} />\n' + 
+      '  defaultToggled={true} />\n' +
       '<Toggle\n' +
       '  name="toggleName3"\n' +
       '  value="toggleValue3"\n' +
@@ -200,7 +201,7 @@ var SwitchesPage = React.createClass({
           {
             name: 'setToggled',
             header: 'Toggle.setToggled(newToggledValue)',
-            desc: 'Sets the toggle to the value of newToggledValue. This method cannot be used ' + 
+            desc: 'Sets the toggle to the value of newToggledValue. This method cannot be used ' +
                   'while "checked" is defined as a property.'
           }
         ]
@@ -219,7 +220,7 @@ var SwitchesPage = React.createClass({
     ];
 
     return (
-      <ComponentDoc 
+      <ComponentDoc
         name="Switches"
         code={code}
         desc={desc}
@@ -246,21 +247,21 @@ var SwitchesPage = React.createClass({
 
         <div className="switches-example-container">
           <Checkbox
-            name="checkboxName1" 
+            name="checkboxName1"
             value="checkboxValue1"
             label="went for a run today"
             onCheck={this._onCheck}/>
         </div>
         <div className="switches-example-container">
-          <Checkbox 
-            name="checkboxName2" 
+          <Checkbox
+            name="checkboxName2"
             value="checkboxValue2"
             label="fed the dog"
             defaultChecked={true}/>
         </div>
         <div className="switches-example-container">
-          <Checkbox 
-            name="checkboxName3" 
+          <Checkbox
+            name="checkboxName3"
             value="checkboxValue3"
             label="built a house on the moon"
             disabled={true}/>
@@ -279,25 +280,25 @@ var SwitchesPage = React.createClass({
         </div>
 
         <div className="switches-example-container">
-          <Toggle 
+          <Toggle
             name="toggleName1"
             value="toggleValue1"
-            label="activate thrusters" 
+            label="activate thrusters"
             onToggle={this._onToggle}/>
         </div>
         <div className="switches-example-container">
-          <Toggle 
+          <Toggle
             name="toggleName2"
             value="toggleValue2"
-            label="auto-pilot" 
+            label="auto-pilot"
             defaultToggled={true}/>
         </div>
         <div className="switches-example-container">
-          <Toggle 
+          <Toggle
             onToggle={this._onToggle}
             name="toggleName3"
             value="toggleValue3"
-            label="initiate self-destruct sequence" 
+            label="initiate self-destruct sequence"
             disabled={true}/>
         </div>
 

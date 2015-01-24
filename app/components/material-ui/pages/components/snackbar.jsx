@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var RaisedButton = mui.RaisedButton;
 var Snackbar = mui.Snackbar;
 var ComponentDoc = require('../../component-doc.jsx');
@@ -7,17 +9,16 @@ var ComponentDoc = require('../../component-doc.jsx');
 var SnackbarPage = React.createClass({
 
   render: function() {
-    var code = 
-      '<Snackbar\n' + 
-      '  message="Event added to your calendar"\n' + 
-      '  action="undo"\n' + 
+    var code =
+      '<Snackbar\n' +
+      '  message="Event added to your calendar"\n' +
+      '  action="undo"\n' +
       '  onActionTouchTap={this._handleAction}/>\n\n' +
       '//Somewhere in our code\n' +
       '_handleAction: function() {\n' +
       '  //We can add more code to this function, but for now we\'ll just include an alert.\n' +
       '  alert("We removed the event from your calendar.");\n' +
       '}';
-      ;
 
     var componentInfo = [
       {
@@ -76,14 +77,14 @@ var SnackbarPage = React.createClass({
         code={code}
         componentInfo={componentInfo}>
 
-        <RaisedButton 
-          onTouchTap={this._handleClick} 
+        <RaisedButton
+          onTouchTap={this._handleClick}
           label="Add to my calendar" />
 
-        <Snackbar 
-          ref="snackbar" 
+        <Snackbar
+          ref="snackbar"
           message="Event added to your calendar"
-          action="undo" 
+          action="undo"
           onActionTouchTap={this._handleAction} />
 
       </ComponentDoc>

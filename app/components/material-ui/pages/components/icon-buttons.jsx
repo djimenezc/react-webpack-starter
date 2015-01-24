@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var IconButton = mui.IconButton;
 var ComponentDoc = require('../../component-doc.jsx');
 
@@ -55,7 +57,6 @@ var IconButtonsPage = React.createClass({
 
       </ComponentDoc>
     );
-    
   }
 
 });

@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var DatePicker = mui.DatePicker;
 var ComponentDoc = require('../../component-doc.jsx');
 
@@ -18,7 +20,7 @@ var DatePickerPage = React.createClass({
       '  name="LandscapeDialogDate"\n' +
       '  placeholder="Landscape Dialog"\n' +
       '  inlinePlaceholder={true}\n' +
-      '  mode="landscape"/>'; 
+      '  mode="landscape"/>';
 
     var componentInfo = [
       {

@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var TextField = mui.TextField;
 var ComponentDoc = require('../../component-doc.jsx');
 
@@ -274,7 +276,7 @@ var TextFieldsPage = React.createClass({
 
   _handleErrorInputChange: function(e) {
     this.setState({
-      errorText: e.target.value ? '' : 'This field is required.' 
+      errorText: e.target.value ? '' : 'This field is required.'
     });
   },
 
@@ -282,13 +284,13 @@ var TextFieldsPage = React.createClass({
     var value = e.target.value;
     var isNumeric = !isNaN(parseFloat(value)) && isFinite(value);
     this.setState({
-      error2Text: isNumeric ? '' : 'This field must be numeric.' 
+      error2Text: isNumeric ? '' : 'This field must be numeric.'
     });
   },
 
   _handleFloatingErrorInputChange: function(e) {
     this.setState({
-      floatingErrorText: e.target.value ? '' : 'This field is required.' 
+      floatingErrorText: e.target.value ? '' : 'This field is required.'
     });
   },
 
@@ -296,7 +298,7 @@ var TextFieldsPage = React.createClass({
     var value = e.target.value;
     var isNumeric = !isNaN(parseFloat(value)) && isFinite(value);
     this.setState({
-      floatingError2Text: isNumeric ? '' : 'This field must be numeric.' 
+      floatingError2Text: isNumeric ? '' : 'This field must be numeric.'
     });
   },
 

@@ -1,3 +1,5 @@
+"use strict";
+
 var React = require('react');
 var PageWithNav = require('./page-with-nav.jsx');
 

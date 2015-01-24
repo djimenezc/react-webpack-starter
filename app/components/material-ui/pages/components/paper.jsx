@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var Paper = mui.Paper;
 var ComponentDoc = require('../../component-doc.jsx');
 
@@ -7,7 +9,7 @@ var PaperPage = React.createClass({
 
   render: function() {
 
-    var code = 
+    var code =
       '//Rounded Corners\n' +
       '<Paper zDepth={1} />\n' +
       '<Paper zDepth={2} />\n' +

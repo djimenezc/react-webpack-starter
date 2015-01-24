@@ -1,9 +1,7 @@
-/**
- * @jsx React.DOM
- */
- 
+"use strict";
+
 var React = require('react'),
-  mui = require('mui'),
+  mui = require('material-ui'),
   CodeExample = require('../../code-example/code-example.jsx'),
 
   labelMenuItems = [
@@ -83,7 +81,7 @@ var MenusPage = React.createClass({
   },
 
   _getLabelMenuExample: function() {
-    var code = 
+    var code =
       "var labelMenuItems = [\n" +
       "   { payload: '1', text: 'ID', data: '1234567890', icon: 'home' },\n" +
       "   { payload: '2', text: 'Type', data: 'Announcement', icon: 'home' },\n" +
@@ -101,7 +99,7 @@ var MenusPage = React.createClass({
   },
 
   _getNumberMenuExample: function() {
-    var code = 
+    var code =
       "var numberMenuItems = [\n" +
       "   { payload: '1', text: 'All', number: '22' },\n" +
       "   { payload: '3', text: 'Uncategorized', number: '6'},\n" +
@@ -119,7 +117,7 @@ var MenusPage = React.createClass({
   },
 
   _getIconMenuExample: function() {
-    var code = 
+    var code =
       "iconMenuItems = [\n" +
       "   { payload: '1', text: 'Live Answer', icon: 'communication_phone', number: '10' },\n" +
       "   { payload: '2', text: 'Voicemail', icon: 'communication_voicemail',  number: '5' },\n" +
@@ -138,7 +136,7 @@ var MenusPage = React.createClass({
   },
 
   _getFilterMenuExample: function() {
-    var code = 
+    var code =
       "filterMenuItems = [\n" +
       "   { payload: '1', text: 'Text Opt-In', toggle: true},\n" +
       "   { payload: '2', text: 'Text Opt-Out', toggle: true},\n" +
@@ -156,7 +154,7 @@ var MenusPage = React.createClass({
   },
 
   _getNestedMenuExample: function() {
-    var code = 
+    var code =
       "nestedMenuItems = [\n" +
       "    { type: mui.MenuItem.Types.NESTED, text: 'Reports', items: [\n" +
       "      { payload: '1', text: 'Nested Item 1' },\n" +
@@ -195,7 +193,7 @@ var MenusPage = React.createClass({
   },
 
   _onFilterMenuToggle: function(e, key, menuItem, toggled) {
-    console.log('Filter Menu Toggled: ', key, menuItem, toggled)
+    console.log('Filter Menu Toggled: ', key, menuItem, toggled);
   },
 
   _onItemClick: function(e, key, menuItem) {

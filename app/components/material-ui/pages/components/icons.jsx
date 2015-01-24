@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react'),
-    mui = require('mui'),
+    mui = require('material-ui'),
     Icon = mui.Icon,
     CodeExample = require('../../code-example/code-example.jsx'),
 
@@ -860,7 +862,7 @@ var IconsPage = React.createClass({
           This component currently uses icon fonts
           from <a href="https://github.com/designjockey/material-design-fonticons">material-design-fonticons</a>.
           Thanks so much to <a href="https://github.com/designjockey">@designjockey</a> for
-          creating these font files while we wait for the offical version to be 
+          creating these font files while we wait for the offical version to be
           release from <a href="https://github.com/google/material-design-icons">google/material-design-icons</a>.
           In addition to these icons, we've also created a few new icons that are custom to this
           project for you to use. You can find them at the bottom of this page.

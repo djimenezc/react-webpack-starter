@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var DropDownMenu = mui.DropDownMenu;
 var ComponentDoc = require('../../component-doc.jsx');
 
@@ -15,7 +17,7 @@ var DropDownMenuPage = React.createClass({
       { payload: '5', text: 'Weekly' },
     ];
 
-    var code = 
+    var code =
       "var menuItems = [\n" +
       "   { payload: '1', text: 'Never' },\n" +
       "   { payload: '2', text: 'Every Night' },\n" +

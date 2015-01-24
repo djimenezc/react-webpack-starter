@@ -1,6 +1,8 @@
+"use strict";
+
 var React = require('react');
 var CodeExample = require('../../code-example/code-example.jsx');
-var mui = require('mui');
+var mui = require('material-ui');
 var Router = require('react-router');
 var ComponentDoc = require('../../component-doc.jsx');
 var RouteHandler = Router.RouteHandler;
@@ -8,7 +10,7 @@ var Tabs = mui.Tabs;
 var Tab= mui.Tab;
 
 var TabsPage = React.createClass({
-  
+
   mixins: [Router.Navigation, Router.State],
 
   render: function(){
@@ -50,8 +52,6 @@ var TabsPage = React.createClass({
       'refs can be passed to the Tabs container and to any element or component within the template. ' +
       'If you need to access a tab directly - you can do so with the first argument of onActive or ' +
       'by accessing the props.children array by passing refs to the Tabs container.';
-
-         
 
     var componentInfo = [
       {

@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react'),
-  mui = require('mui'),
+  mui = require('material-ui'),
   Dom = mui.Utils.Dom,
   CodeExample = require('../../code-example/code-example.jsx');
 
@@ -9,7 +11,7 @@ var TypographyPage = React.createClass({
     return (
       <div>
         <h2 className="mui-font-style-headline">Vertical Rhythm</h2>
-        <p>Default styles for headings and paragraphs have consistent vertical rhythm. Click the text below to see. :)</p>
+        <p>Default styles for headings and paragraphs have consistent vertical rhythm. Click the text below to see.</p>
         {this._getVerticalRhythmExample()}
 
         <h2 className="mui-font-style-headline">Typographic Scale</h2>
@@ -25,7 +27,7 @@ var TypographyPage = React.createClass({
   },
 
   _getVerticalRhythmExample: function() {
-    var code = 
+    var code =
       '<h1>h1. Html Heading</h1>\n' +
       '<h2>h2. Html Heading</h2>\n' +
       '<h1>h1. Html Heading</h1>\n' +
@@ -124,7 +126,7 @@ var TypographyPage = React.createClass({
   },
 
   _getTrackingExample: function() {
-    var code = 
+    var code =
       '<div className="mui-font-style-display-4">Tracking -10px</div>\n' +
       '<div className="mui-font-style-display-3">Tracking -5px</div>\n' +
       '<div className="mui-font-style-display-2">Tracking 0px</div>\n' +

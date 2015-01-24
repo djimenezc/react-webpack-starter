@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var Slider = mui.Slider;
 var ComponentDoc = require('../../component-doc.jsx');
 

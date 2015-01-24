@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var MenuItem = mui.MenuItem;
 var LeftNav = mui.LeftNav;
 var RaisedButton = mui.RaisedButton;
@@ -13,7 +15,7 @@ var LeftNavPage = React.createClass({
     };
   },
 
-  render: function() { 
+  render: function() {
 
     var menuItems = [
       { route: 'get-started', text: 'Get Started' },
@@ -23,7 +25,7 @@ var LeftNavPage = React.createClass({
       { type: MenuItem.Types.LINK, payload: 'https://github.com/callemall/material-ui', text: 'GitHub' }
     ];
 
-    var code = 
+    var code =
       'menuItems = [\n' +
       '  { route: \'get-started\', text: \'Get Started\' },\n' +
       '  { route: \'css-framework\', text: \'CSS Framework\' },\n' +
@@ -116,7 +118,6 @@ var LeftNavPage = React.createClass({
 
       </ComponentDoc>
     );
-    
   },
 
   _showLeftNavClick: function() {

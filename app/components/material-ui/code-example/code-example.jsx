@@ -1,7 +1,7 @@
 "use strict";
 
 var React = require('react'),
-  mui = require('mui'),
+  mui = require('material-ui'),
   CodeBlock = require('./code-block.jsx');
 
 var CodeExample = React.createClass({

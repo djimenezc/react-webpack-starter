@@ -6,7 +6,7 @@ var mui = require('material-ui');
 var RaisedButton = mui.RaisedButton;
 var MuiFeature = require('./material-ui/Material-ui-feature.jsx');
 
-var Mui = React.createClass({
+var MaterialUI = React.createClass({
 
   mixins: [Router.Navigation],
 
@@ -68,7 +68,6 @@ var Mui = React.createClass({
   _onDemoClick: function() {
     this.transitionTo('components');
   }
-
 });
 
-module.exports = Mui;
+module.exports = MaterialUI;

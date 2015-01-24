@@ -9,7 +9,7 @@ var loadersByExtension = require("./config/loadersByExtension");
 
 module.exports = function(options) {
   var entry = {
-    main: reactEntry("app")
+    main: reactEntry("App")
   };
 
   var loaders = {

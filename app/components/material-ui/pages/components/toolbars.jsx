@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var DropDownIcon = mui.DropDownIcon;
 var DropDownMenu = mui.DropDownMenu;
 var Icon = mui.Icon;
@@ -12,7 +14,7 @@ var ToolbarPage = React.createClass({
 
   render: function() {
 
-    var code = 
+    var code =
       'var filterOptions = [\n' +
       '  { payload: \'1\', text: \'All Broadcasts\' },\n' +
       '  { payload: \'2\', text: \'All Voice\' },\n' +
@@ -26,7 +28,7 @@ var ToolbarPage = React.createClass({
       '  { payload: \'1\', text: \'Download\' },\n' +
       '  { payload: \'2\', text: \'More Info\' }\n' +
       '];\n\n' +
-      '<Toolbar>\n' + 
+      '<Toolbar>\n' +
       '  <ToolbarGroup key={0} float="left">\n' +
       '    <DropDownMenu menuItems={filterOptions} />\n' +
       '  </ToolbarGroup>\n' +

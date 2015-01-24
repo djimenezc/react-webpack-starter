@@ -1,5 +1,7 @@
+"use strict";
+
 var React = require('react');
-var mui = require('mui');
+var mui = require('material-ui');
 var Dialog = mui.Dialog;
 var FlatButton = mui.FlatButton;
 var RaisedButton = mui.RaisedButton;
@@ -9,7 +11,7 @@ var DialogPage = React.createClass({
 
   render: function() {
 
-    var code = 
+    var code =
       '//Standard Actions\n' +
       'var standardActions = [\n' +
       '  { text: \'Cancel\' },\n' +
