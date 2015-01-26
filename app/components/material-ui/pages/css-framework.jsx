@@ -1,7 +1,7 @@
 "use strict";
 
 var React = require('react'),
-  PageWithNav = require('./page-with-nav.jsx');
+  PageWithNav = require('../../common/jsx/page-with-nav.jsx');
 
 var CssFramework = React.createClass({
 

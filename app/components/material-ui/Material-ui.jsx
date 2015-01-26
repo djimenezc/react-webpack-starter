@@ -1,33 +1,25 @@
 "use strict";
 
-var React = require("react");
+var React = require('react');
 var Router = require('react-router');
 var RouteHandler = Router.RouteHandler;
-
 var mui = require('material-ui');
 var AppBar = mui.AppBar;
 var AppCanvas = mui.AppCanvas;
 var IconButton = mui.IconButton;
-var AppLeftNav = require('./app-left-nav.jsx');
+var LeftNav = require('../common/jsx/left-nav.jsx');
 
-require("./App.styl");
+require('./Material-ui.less');
 
-var App = React.createClass({
-
-  /** A mixin for components that need to know about the active params, query
-   * and routes. Any handler on a route with dynamic segments will want to use
-   * this.
-   *
-   * source -- https://github.com/rackt/react-router/blob/master/docs/api/mixins/State.md
-   */
-  mixins: [ Router.State ],
+var MaterialUI = React.createClass({
+  mixins: [Router.State],
 
   render: function() {
 
     var title =
       this.isActive('get-started') ? 'Get Started' :
       this.isActive('css-framework') ? 'Css Framework' :
-      this.isActive('components') ? 'Components' : "React Webpack Starter";
+      this.isActive('components') ? 'Components' : '';
 
     var githubButton = (
       <IconButton
@@ -48,24 +40,25 @@ var App = React.createClass({
           {githubButton}
         </AppBar>
 
-        <AppLeftNav ref="leftNav" />
+        <LeftNav ref="leftNav" />
 
         <RouteHandler />
 
         <div className="footer full-width-section mui-dark-theme">
           <p>
-            Footer Placeholder
+            Hand crafted with love by the engineers at <a href="http://call-em-all.com">Call-Em-All</a> and our
+            awesome <a href="https://github.com/callemall/material-ui/graphs/contributors">contributors</a>.
           </p>
+          {githubButton}
         </div>
 
       </AppCanvas>
     );
   },
 
-  // TODO: explain what this does.
   _onMenuIconButtonTouchTap: function() {
     this.refs.leftNav.toggle();
   }
 });
 
-module.exports = App;
+module.exports = MaterialUI;

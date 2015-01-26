@@ -4,9 +4,9 @@ var React = require('react');
 var Router = require('react-router');
 var mui = require('material-ui');
 var RaisedButton = mui.RaisedButton;
-var MuiFeature = require('./material-ui/Material-ui-feature.jsx');
+var HomeFeature = require('./Material-ui-feature.jsx');
 
-var MaterialUI = React.createClass({
+var HomePage = React.createClass({
 
   mixins: [Router.Navigation],
 
@@ -45,9 +45,9 @@ var MaterialUI = React.createClass({
         <div className="full-width-section home-features">
 
           <div className="feature-container full-width-section-content">
-            <MuiFeature heading="Get Started" route="get-started" img="images/get-started.svg" />
-            <MuiFeature heading="CSS Framework" route="css-framework" img="images/css-framework.svg" />
-            <MuiFeature heading="Components" route="components" img="images/components.svg" />
+            <HomeFeature heading="Get Started" route="get-started" img="images/get-started.svg" />
+            <HomeFeature heading="CSS Framework" route="css-framework" img="images/css-framework.svg" />
+            <HomeFeature heading="Components" route="components" img="images/components.svg" />
           </div>
 
         </div>
@@ -68,6 +68,7 @@ var MaterialUI = React.createClass({
   _onDemoClick: function() {
     this.transitionTo('components');
   }
+
 });
 
-module.exports = MaterialUI;
+module.exports = HomePage;

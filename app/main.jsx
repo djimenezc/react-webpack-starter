@@ -2,7 +2,7 @@
 
 var React = require("react");
 var Router = require("react-router");
-var AppRoutes = require("../app/" + __resourceQuery.substr(1) + "-routes");
+var AppRoutes = require("../app/components/" + __resourceQuery.substr(1) + "-routes");
 var injectTapEventPlugin = require("react-tap-event-plugin");
 
 // Export React so the dev tools can find it.

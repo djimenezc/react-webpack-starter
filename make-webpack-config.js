@@ -28,6 +28,8 @@ module.exports = function(options) {
 
   var stylesheetLoaders = {
     "css": "css-loader",
+    "sass": "css-loader!sass-loader",
+    "less": "css-loader!less-loader",
     "styl": "css-loader!stylus-loader"
   };
 
@@ -126,7 +128,7 @@ module.exports = function(options) {
   }
 
   function reactEntry(name) {
-    return (options.prerender ? "./config/prerender?" : "./config/app?") + name;
+    return (options.prerender ? "./app/prerender?" : "./app/main?") + name;
   }
 
   return {

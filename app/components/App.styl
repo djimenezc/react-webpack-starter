@@ -1,0 +1,39 @@
+@import "constants"
+@import "mixins"
+@import "./common/styles/normalize.css"
+
+@font-face
+  // Light
+  font-family 'Roboto'
+  font-style normal
+  font-weight 300
+  src url('../fonts/Roboto-Light.ttf') format('truetype')
+
+@font-face
+  // Light
+  font-family 'Roboto'
+  font-style normal
+  font-weight 400
+  src url('../fonts/Roboto-Regular.ttf') format('truetype')
+
+@font-face
+  // Light
+  font-family 'Roboto'
+  font-style normal
+  font-weight 700
+  src url('../fonts/Roboto-Medium.ttf') format('truetype')
+
+body
+  color default-text-color
+  font-family default-fonts
+  font-size default-font-size
+  font-weight 400
+
+.App
+  opacity 1
+  color red
+
+.App.loading
+  opacity 0.2
+  transition opacity 600ms
+
