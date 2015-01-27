@@ -6,7 +6,7 @@ var RouteHandler = Router.RouteHandler;
 
 var mui = require('material-ui');
 
-require("./App.styl");
+require("../styles/App.styl");
 
 var App = React.createClass({
 

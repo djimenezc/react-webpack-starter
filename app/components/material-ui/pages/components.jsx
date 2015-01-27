@@ -1,7 +1,7 @@
 "use strict";
 
 var React = require('react');
-var PageWithNav = require('../../common/jsx/page-with-nav.jsx');
+var PageWithNav = require('../../mixins/page-with-nav.jsx');
 
 var Components = React.createClass({
 

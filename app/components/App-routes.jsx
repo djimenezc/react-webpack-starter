@@ -49,7 +49,7 @@ var Toolbars = require('./material-ui/pages/components/toolbars.jsx');
 
 var AppRoutes = (
   <Route name="root" path="/" handler={App}>
-    <DefaultRoute name="home" handler={AppHome} />
+    <Route name="home" handler={AppHome} />
     <Route name="checkbox" handler={Checkbox} />
     <Route name="some-page" handler={SomePage} />
 
@@ -83,6 +83,8 @@ var AppRoutes = (
       </Route>
       <Redirect from="/material-ui" to="material-ui-home" />
     </Route>
+
+    <DefaultRoute handler={AppHome} />
   </Route>
 );
 
