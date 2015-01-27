@@ -3,7 +3,7 @@
 var React = require('react'),
     mui = require('material-ui'),
     Icon = mui.Icon,
-    CodeExample = require('../../code-example/code-example.jsx'),
+    CodeExample = require('../../mixins/code-example.jsx'),
 
     iconGroups = [
       {

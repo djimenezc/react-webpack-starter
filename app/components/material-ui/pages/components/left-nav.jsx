@@ -5,7 +5,7 @@ var mui = require('material-ui');
 var MenuItem = mui.MenuItem;
 var LeftNav = mui.LeftNav;
 var RaisedButton = mui.RaisedButton;
-var ComponentDoc = require('../../component-doc.jsx');
+var ComponentDoc = require('../../mixins/component-doc.jsx');
 
 var LeftNavPage = React.createClass({
 

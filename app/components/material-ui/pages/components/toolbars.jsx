@@ -8,7 +8,7 @@ var Icon = mui.Icon;
 var RaisedButton = mui.RaisedButton;
 var Toolbar = mui.Toolbar;
 var ToolbarGroup = mui.ToolbarGroup;
-var ComponentDoc = require('../../component-doc.jsx');
+var ComponentDoc = require('../../mixins/component-doc.jsx');
 
 var ToolbarPage = React.createClass({
 

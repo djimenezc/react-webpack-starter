@@ -1,10 +1,10 @@
 "use strict";
 
 var React = require('react');
-var CodeExample = require('../../code-example/code-example.jsx');
+var CodeExample = require('../../mixins/code-example.jsx');
 var mui = require('material-ui');
 var Router = require('react-router');
-var ComponentDoc = require('../../component-doc.jsx');
+var ComponentDoc = require('../../mixins/component-doc.jsx');
 var RouteHandler = Router.RouteHandler;
 var Tabs = mui.Tabs;
 var Tab= mui.Tab;

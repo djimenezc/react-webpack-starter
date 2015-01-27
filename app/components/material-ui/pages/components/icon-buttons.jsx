@@ -3,7 +3,7 @@
 var React = require('react');
 var mui = require('material-ui');
 var IconButton = mui.IconButton;
-var ComponentDoc = require('../../component-doc.jsx');
+var ComponentDoc = require('../../mixins/component-doc.jsx');
 
 var IconButtonsPage = React.createClass({
 

@@ -5,7 +5,7 @@ var mui = require('material-ui');
 var FlatButton = mui.FlatButton;
 var FloatingActionButton = mui.FloatingActionButton;
 var RaisedButton = mui.RaisedButton;
-var ComponentDoc = require('../../component-doc.jsx');
+var ComponentDoc = require('../../mixins/component-doc.jsx');
 
 var ButtonPage = React.createClass({
 

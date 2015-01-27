@@ -2,7 +2,7 @@
 
 var React = require('react'),
   mui = require('material-ui'),
-  CodeBlock = require('../code-example/code-block.jsx');
+  CodeBlock = require('../mixins/code-block.jsx');
 
 var GetStarted = React.createClass({
 

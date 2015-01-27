@@ -4,7 +4,7 @@ var React = require('react');
 var mui = require('material-ui');
 var RaisedButton = mui.RaisedButton;
 var Snackbar = mui.Snackbar;
-var ComponentDoc = require('../../component-doc.jsx');
+var ComponentDoc = require('../../mixins/component-doc.jsx');
 
 var SnackbarPage = React.createClass({
 

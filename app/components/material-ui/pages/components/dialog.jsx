@@ -5,7 +5,7 @@ var mui = require('material-ui');
 var Dialog = mui.Dialog;
 var FlatButton = mui.FlatButton;
 var RaisedButton = mui.RaisedButton;
-var ComponentDoc = require('../../component-doc.jsx');
+var ComponentDoc = require('../../mixins/component-doc.jsx');
 
 var DialogPage = React.createClass({
 

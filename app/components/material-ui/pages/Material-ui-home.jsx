@@ -4,7 +4,12 @@ var React = require('react');
 var Router = require('react-router');
 var mui = require('material-ui');
 var RaisedButton = mui.RaisedButton;
-var HomeFeature = require('./Material-ui-feature.jsx');
+var HomeFeature = require('../mixins/Material-ui-feature.jsx');
+
+var materialUiLogoIMage= require('../../../images/material-ui-logo.svg');
+var getStartedImage = require('../../../images/get-started.svg');
+var cssFrameworkImage = require('../../../images/css-framework.svg');
+var componentImage = require('../../../images/components.svg');
 
 var HomePage = React.createClass({
 
@@ -16,7 +21,7 @@ var HomePage = React.createClass({
       <div className="mui-app-content-canvas">
         <div className="home-page-hero full-width-section">
           <div className="home-page-hero-content">
-            <img className="svg-logo" src="images/material-ui-logo.svg" />
+            <img className="svg-logo" src={materialUiLogoIMage} />
             <div className="tagline">
               <h1 className="brand-name">material ui</h1>
               <h2 className="mui-font-style-headline">
@@ -45,9 +50,9 @@ var HomePage = React.createClass({
         <div className="full-width-section home-features">
 
           <div className="feature-container full-width-section-content">
-            <HomeFeature heading="Get Started" route="get-started" img="images/get-started.svg" />
-            <HomeFeature heading="CSS Framework" route="css-framework" img="images/css-framework.svg" />
-            <HomeFeature heading="Components" route="components" img="images/components.svg" />
+            <HomeFeature heading="Get Started" route="get-started" img={getStartedImage} />
+            <HomeFeature heading="CSS Framework" route="css-framework" img={cssFrameworkImage} />
+            <HomeFeature heading="Components" route="components" img={componentImage} />
           </div>
 
         </div>

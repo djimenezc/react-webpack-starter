@@ -3,7 +3,7 @@
 var React = require('react'),
   mui = require('material-ui'),
   Dom = mui.Utils.Dom,
-  CodeExample = require('../../code-example/code-example.jsx');
+  CodeExample = require('../../mixins/code-example.jsx');
 
 var TypographyPage = React.createClass({
 

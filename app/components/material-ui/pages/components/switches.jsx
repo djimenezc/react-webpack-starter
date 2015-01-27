@@ -5,7 +5,7 @@ var mui = require('material-ui');
 var Checkbox = mui.Checkbox;
 var RadioButton = mui.RadioButton;
 var Toggle = mui.Toggle;
-var ComponentDoc = require('../../component-doc.jsx');
+var ComponentDoc = require('../../mixins/component-doc.jsx');
 
 var SwitchesPage = React.createClass({
 

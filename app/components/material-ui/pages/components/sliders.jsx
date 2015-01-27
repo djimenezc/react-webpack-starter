@@ -3,7 +3,7 @@
 var React = require('react');
 var mui = require('material-ui');
 var Slider = mui.Slider;
-var ComponentDoc = require('../../component-doc.jsx');
+var ComponentDoc = require('../../mixins/component-doc.jsx');
 
 var SlidersPage = React.createClass({
 

@@ -14,7 +14,7 @@ var SomePage = require('./some-page/SomePage.jsx');
 var MaterialUI = require('./material-ui/Material-ui.jsx');
 
 // Define material-ui components.
-var MaterialUIHome = require('./material-ui/Material-ui-home.jsx');
+var MaterialUIHome = require('./material-ui/pages/Material-ui-home.jsx');
 var GetStarted = require('./material-ui/pages/get-started.jsx');
 
 var CssFramework = require('./material-ui/pages/css-framework.jsx');

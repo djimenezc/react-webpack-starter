@@ -1,7 +1,7 @@
 "use strict";
 
 var React = require('react');
-var CodeExample = require('./code-example/code-example.jsx');
+var CodeExample = require('./code-example.jsx');
 var ComponentInfo = require('./component-info.jsx');
 
 var ComponentDoc = React.createClass({

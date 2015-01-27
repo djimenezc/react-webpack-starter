@@ -2,7 +2,7 @@
 
 var React = require('react'),
   mui = require('material-ui'),
-  CodeExample = require('../../code-example/code-example.jsx'),
+  CodeExample = require('../../mixins/code-example.jsx'),
 
   labelMenuItems = [
     { payload: '1', text: 'ID', data: '1234567890', icon: 'home' },

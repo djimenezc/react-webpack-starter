@@ -22,7 +22,6 @@ var App = React.createClass({
 
     return (
       <div>
-        <h1> App wrapper </h1>
         <RouteHandler />
       </div>
     );
