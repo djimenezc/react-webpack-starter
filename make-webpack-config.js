@@ -33,15 +33,13 @@ module.exports = function(options) {
     "styl": "css-loader!stylus-loader"
   };
 
-  var alias = {
+  var alias = {};
 
-  };
-  var aliasLoader = {
+  var aliasLoader = {};
 
-  };
-  var externals = [
+  var externals = [];
 
-  ];
+  var node = {};
 
   var modulesDirectories = ["web_modules", "node_modules"];
 
@@ -152,6 +150,7 @@ module.exports = function(options) {
       alias: alias,
     },
     plugins: plugins,
+    node: node,
     devServer: {
       stats: {
         exclude: excludeFromStats

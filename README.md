@@ -1,11 +1,11 @@
 # React with webpack demos
 
-Goal is to learn React and Webpack via integration of existing demos into this
+This react app contains various smaller React demos. Goal is to learn React and Webpack via integration of existing demos into this
 project.
 
 List of Demos
 =
-- Working mock of Material UI Documentations page (https://github.com/callemall/material-ui)
+- Material UI Doc page (http://material-ui.com/) as http://
 
 Setup
 =
