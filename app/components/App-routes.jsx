@@ -6,14 +6,16 @@ var Route = Router.Route;
 var Redirect = Router.Redirect;
 var DefaultRoute = Router.DefaultRoute;
 
-// Define Application components
+// Define main application components
 var App = require('./App.jsx');
 var AppHome = require('./App-home.jsx');
+
+// Define test application components
 var Checkbox = require('./checkbox/Checkbox.jsx');
 var SomePage = require('./some-page/SomePage.jsx');
-var MaterialUI = require('./material-ui/Material-ui.jsx');
 
 // Define material-ui components.
+var MaterialUI = require('./material-ui/Material-ui.jsx');
 var MaterialUIHome = require('./material-ui/pages/Material-ui-home.jsx');
 var GetStarted = require('./material-ui/pages/get-started.jsx');
 
@@ -38,6 +40,11 @@ var Tabs = require('./material-ui/pages/components/tabs.jsx');
 var TextFields = require('./material-ui/pages/components/text-fields.jsx');
 var Toolbars = require('./material-ui/pages/components/toolbars.jsx');
 
+// Define fb react tutorial components
+var FbTutorials = require('./fb-tutorials/fb-tutorials.jsx');
+var FbTutorialsHome = require('./fb-tutorials/fb-tutorials-home.jsx');
+var CommentBox = require('./fb-tutorials/comment-box/Comment-box.jsx');
+
 /** Routes are used to declare your view hierarchy.
   *
   * Say you go to http://localhost:8080/#/components/paper
@@ -52,6 +59,11 @@ var AppRoutes = (
     <Route name="home" handler={AppHome} />
     <Route name="checkbox" handler={Checkbox} />
     <Route name="some-page" handler={SomePage} />
+    <Route name="fb-tutorials" handler={FbTutorials}>
+      <Route name="fb-tutorials-home" handler={FbTutorialsHome} />
+      <Route name="comment-box" handler={CommentBox} />
+      <Redirect from="/fb-tutorials" to="fb-tutorials-home" />
+    </Route>
 
     <Route name="material-ui" handler={MaterialUI}>
       <Route name="material-ui-home" handler={MaterialUIHome} />

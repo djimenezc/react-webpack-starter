@@ -4,8 +4,6 @@ var React = require("react");
 var Router = require('react-router');
 var RouteHandler = Router.RouteHandler;
 
-var mui = require('material-ui');
-
 require("../styles/App.styl");
 
 var App = React.createClass({

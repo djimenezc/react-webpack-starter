@@ -16,6 +16,9 @@ module.exports = React.createClass({
           <li>
             <Link to="material-ui">Material UI</Link>
           </li>
+          <li>
+            <Link to="fb-tutorials">FB tutorials</Link>
+          </li>
         </ul>
         <p>Or try to switch to <Link to="some-page">some page</Link>.</p>
       </div>

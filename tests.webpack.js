@@ -6,4 +6,4 @@ function requireAll(context) {
   context.keys().forEach(context);
 }
 
-requireAll(require.context('./app/Checkbox/__tests__', true, /-test\.jsx$/));
+requireAll(require.context('./app/components/__tests__', true, /-test\.jsx$/));
