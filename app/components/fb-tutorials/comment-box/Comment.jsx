@@ -5,6 +5,8 @@ var marked = require('marked');
 
 var Comment = React.createClass({
   render: function() {
+    // var text = this.props.children.toString()
+    // console.log(this.props);
     var rawMarkup = marked(this.props.children.toString());
     return (
       <div className="comment">
