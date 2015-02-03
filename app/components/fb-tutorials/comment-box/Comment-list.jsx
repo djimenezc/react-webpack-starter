@@ -5,7 +5,8 @@ var Comment = require("./Comment.jsx");
 
 var CommentList = React.createClass({
   render: function() {
-    var commentNodes = this.props.data.map(function(comment, index) {
+    console.log(this.props.data);
+    var commentNodes = this.props.data["_data"].map(function(comment, index) {
       return (
         // `key` is a React-specific concept and is not mandatory for the
         // purpose of this tutorial. if you're curious, see more here:
