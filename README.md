@@ -74,4 +74,10 @@ Sources of enlightenment
 - https://github.com/newtriks/generator-react-webpack
 - https://github.com/TYRONEMICHAEL/react-component-boilerplate
 - http://substantial.com/blog/2014/11/11/test-driven-react-how-to-manually-mock-components
+- https://github.com/BinaryMuse/react-primer
+- https://github.com/i-like-robots/react-tube-tracker
+- https://github.com/petehunt/webpack-howto
+- https://github.com/chadpaulson/react-isomorphic-video-game-search
+- https://github.com/Izzimach/react-three
+- https://github.com/jlongster/blog
 
