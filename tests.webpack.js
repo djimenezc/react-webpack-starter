@@ -1,5 +1,3 @@
-// TODO: make requireAll() find and require all tests in app/
-
 'use strict';
 
 function requireAll(context) {

@@ -14,10 +14,11 @@ module.exports = function(options) {
 
   var loaders = {
     "jsx": options.hotComponents ? ["react-hot-loader", "jsx-loader?harmony"] : "jsx-loader?harmony",
-    // "js": {
-    // loader: "6to5-loader",
-    // include: path.join(__dirname, "app")
-    // },
+    "js|jsx": {
+    loader: "babel-loader",
+    include: path.join(__dirname, "app"),
+    exclude: /node_modules/
+    },
     "txt": "raw-loader",
     "png|jpg|jpeg|gif|svg": "url-loader?limit=10000",
     "woff": "url-loader?limit=100000",
@@ -32,6 +33,20 @@ module.exports = function(options) {
     "less": "css-loader!less-loader",
     "styl": "css-loader!stylus-loader"
   };
+
+  Object.keys(stylesheetLoaders).forEach(function(ext) {
+    var loaders = stylesheetLoaders[ext];
+    if(Array.isArray(loaders)) { loaders = loaders.join("!"); }
+    if(options.prerender) {
+      stylesheetLoaders[ext] = "null-loader";
+    } else if(options.separateStylesheet) {
+      stylesheetLoaders[ext] = ExtractTextPlugin.extract("style-loader", loaders);
+    } else {
+      stylesheetLoaders[ext] = "style-loader!" + loaders;
+    }
+  });
+
+  var allLoaders = loadersByExtension(loaders).concat(loadersByExtension(stylesheetLoaders));
 
   var alias = {};
 
@@ -96,20 +111,8 @@ module.exports = function(options) {
     plugins.push(new webpack.optimize.CommonsChunkPlugin("commons", "commons.js" + (options.longTermCaching && !options.prerender ? "?[chunkhash]" : "")));
   }
 
-  Object.keys(stylesheetLoaders).forEach(function(ext) {
-    var loaders = stylesheetLoaders[ext];
-    if(Array.isArray(loaders)) { loaders = loaders.join("!"); }
-    if(options.prerender) {
-      stylesheetLoaders[ext] = "null-loader";
-    } else if(options.separateStylesheet) {
-      stylesheetLoaders[ext] = ExtractTextPlugin.extract("style-loader", loaders);
-    } else {
-      stylesheetLoaders[ext] = "style-loader!" + loaders;
-    }
-  });
-
   if(options.separateStylesheet && !options.prerender) {
-    plugins.push(new ExtractTextPlugin("[name].css"));
+    plugins.push(new ExtractTextPlugin("[name].css" + (options.longTermCaching ? "?[contenthash]" : "")));
   }
 
   if(options.minimize) {
@@ -127,6 +130,21 @@ module.exports = function(options) {
 
   function reactEntry(name) {
     return (options.prerender ? "./app/prerender?" : "./app/main?") + name;
+  }
+
+  if(options.bootstrap) {
+
+    plugins.push(
+     new webpack.ProvidePlugin({
+       $: "jquery",
+       "windows.jQuery": "jquery",
+       jQuery: "jquery"
+     })
+    );
+
+    allLoaders.push(
+      { test: require.resolve("jquery"), loader: "imports?jQuery=jquery" }
+    );
   }
 
   return {
