@@ -7,6 +7,20 @@
   "engines": {
     "node": "0.10.x"
   },
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --config webpack-production.config.js --progress --profile --colors",
+    "dev": "npm run hot-dev-server & npm run start-dev",
+    "clean": "rm -rf ./node_modules/",
+    "deps": "npm install --quiet --loglevel warn && ./node_modules/.bin/selenium-standalone install && mkdir ./build/",
+    "upgrade": "./node_modules/npm-check-updates/bin/npm-check-updates -u && npm test",
+    "hot-dev-server": "./node_modules/.bin/webpack-dev-server --config webpack-hot-dev-server.config.js --hot --progress --colors --port 2992 --inline",
+    "test": "npm run karma & npm run lint",
+    "karma": "./node_modules/.bin/karma start --single-run",
+    "lint": "./node_modules/.bin/jsxhint --jsx-only app --exclude node_modules; true;",
+    "selenium": "./node_modules/.bin/nightwatch -e firefox,chrome",
+    "start": "node lib/server-production",
+    "start-dev": "node lib/server-development"
+  },
   "keywords": [
     "webpack",
     "react",
@@ -78,19 +92,5 @@
   "dependencies": {
     "react": "^0.12.2",
     "react-router": "^0.12.0"
-  },
-  "scripts": {
-    "build": "./node_modules/.bin/webpack --config webpack-production.config.js --progress --profile --colors",
-    "dev": "npm run hot-dev-server & npm run start-dev",
-    "clean": "rm -rf ./node_modules/",
-    "deps": "npm install --quiet --loglevel warn && ./node_modules/.bin/selenium-standalone install && mkdir ./build/",
-    "upgrade": "./node_modules/npm-check-updates/bin/npm-check-updates -u && npm test",
-    "hot-dev-server": "./node_modules/.bin/webpack-dev-server --config webpack-hot-dev-server.config.js --hot --progress --colors --port 2992 --inline",
-    "test": "npm run karma & npm run lint",
-    "karma": "./node_modules/.bin/karma start --single-run",
-    "lint": "./node_modules/.bin/jsxhint --jsx-only app --exclude node_modules; true;",
-    "selenium": "./node_modules/.bin/nightwatch -e firefox,chrome",
-    "start": "node lib/server-production",
-    "start-dev": "node lib/server-development"
   }
 }

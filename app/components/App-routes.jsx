@@ -12,6 +12,7 @@ var AppHome = require('./App-home.jsx');
 
 // Define test application components
 var Checkbox = require('./checkbox/Checkbox.jsx');
+var Notepad = require('./notepad/Notepad.jsx');
 var SomePage = require('./some-page/SomePage.jsx');
 
 // Define material-ui components.
@@ -58,6 +59,7 @@ var AppRoutes = (
   <Route name="root" path="/" handler={App}>
     <Route name="home" handler={AppHome} />
     <Route name="checkbox" handler={Checkbox} />
+    <Route name="notepad" handler={Notepad} />
     <Route name="some-page" handler={SomePage} />
     <Route name="fb-tutorials" handler={FbTutorials}>
       <Route name="fb-tutorials-home" handler={FbTutorialsHome} />

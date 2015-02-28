@@ -11,6 +11,9 @@ module.exports = React.createClass({
         <p>Click on a React demos: </p>
         <ul>
           <li>
+            <Link to="notepad">Notepad</Link>
+          </li>
+          <li>
             <Link to="checkbox">Checkbox</Link>
           </li>
           <li>
