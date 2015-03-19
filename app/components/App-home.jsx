@@ -5,25 +5,25 @@ var Link = require("react-router").Link;
 
 module.exports = React.createClass({
   render: function() {
+    var style = {
+      default: {
+        "padding": "2em"
+      }
+    };
+
     return (
-      <div>
-        <h2>Home</h2>
-        <p>Click on a React demos: </p>
+
+      <div style={style.default}>
+        <h2>Demos</h2>
         <ul>
-          <li>
-            <Link to="notepad">Notepad</Link>
-          </li>
-          <li>
-            <Link to="checkbox">Checkbox</Link>
-          </li>
           <li>
             <Link to="material-ui">Material UI</Link>
           </li>
           <li>
-            <Link to="fb-tutorials">FB tutorials</Link>
+            <Link to="checkbox">Checkbox</Link>
           </li>
         </ul>
-        <p>Or try to switch to <Link to="some-page">some page</Link>.</p>
+        <p>Or open the page that shows <Link to="readme">README.md</Link>.</p>
       </div>
     );
   }

@@ -1,8 +1,8 @@
-This react app contains smaller React demos. The goal is to understand React and Webpack via integration of existing demos into this project.
+The goal is to understand React, Flux, and Webpack through integration of existing demos into this project.
 
-List of Demos
+Demos
 =
-- Material UI Doc page (http://material-ui.com/)
+- Material UI Doc page (http://material-ui.com/) -- http://localhost:8080/material-ui/material-ui-home
 
 Setup
 =
@@ -47,7 +47,6 @@ All subsequent runs:
 > npm run dev
 > open http://localhost:8080/
 ```
-
 
 Production compilation and server
 =

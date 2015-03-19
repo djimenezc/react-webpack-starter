@@ -6,14 +6,15 @@ var Route = Router.Route;
 var Redirect = Router.Redirect;
 var DefaultRoute = Router.DefaultRoute;
 
-// Define main application components
+// main application components
 var App = require('./App.jsx');
 var AppHome = require('./App-home.jsx');
 
-// Define test application components
+// Define Checkbox component
 var Checkbox = require('./checkbox/Checkbox.jsx');
-var Notepad = require('./notepad/Notepad.jsx');
-var SomePage = require('./some-page/SomePage.jsx');
+
+// Define Flux demo components
+var TodoApp = require('./flux/TodoApp.jsx');
 
 // Define material-ui components.
 var MaterialUI = require('./material-ui/Material-ui.jsx');
@@ -41,11 +42,6 @@ var Tabs = require('./material-ui/pages/components/tabs.jsx');
 var TextFields = require('./material-ui/pages/components/text-fields.jsx');
 var Toolbars = require('./material-ui/pages/components/toolbars.jsx');
 
-// Define fb react tutorial components
-var FbTutorials = require('./fb-tutorials/fb-tutorials.jsx');
-var FbTutorialsHome = require('./fb-tutorials/fb-tutorials-home.jsx');
-var CommentBox = require('./fb-tutorials/comment-box/Comment-box.jsx');
-
 /** Routes are used to declare your view hierarchy.
   *
   * Say you go to http://localhost:8080/#/components/paper
@@ -57,15 +53,10 @@ var CommentBox = require('./fb-tutorials/comment-box/Comment-box.jsx');
 
 var AppRoutes = (
   <Route name="root" path="/" handler={App}>
+    <Route name="readme" path="/readme" handler={require("react-proxy!./Readme/Readme.jsx")} />
     <Route name="home" handler={AppHome} />
     <Route name="checkbox" handler={Checkbox} />
-    <Route name="notepad" handler={Notepad} />
-    <Route name="some-page" handler={SomePage} />
-    <Route name="fb-tutorials" handler={FbTutorials}>
-      <Route name="fb-tutorials-home" handler={FbTutorialsHome} />
-      <Route name="comment-box" handler={CommentBox} />
-      <Redirect from="/fb-tutorials" to="fb-tutorials-home" />
-    </Route>
+    <Route name="TodoApp" handler={TodoApp} />
 
     <Route name="material-ui" handler={MaterialUI}>
       <Route name="material-ui-home" handler={MaterialUIHome} />

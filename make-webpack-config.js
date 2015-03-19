@@ -171,6 +171,7 @@ module.exports = function(options) {
     node: node,
     devServer: {
       stats: {
+        cached: false,
         exclude: excludeFromStats
       }
     }

@@ -1,6 +1,6 @@
 "use strict";
 
-var React = require('react');
+var React = require('react/addons');
 var mui = require('material-ui');
 var TextField = mui.TextField;
 var ComponentDoc = require('../../mixins/component-doc.jsx');
