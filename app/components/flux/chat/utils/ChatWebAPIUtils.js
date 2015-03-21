@@ -13,7 +13,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-// Simulate Server responses.
+// Simulate Server responses
 
 var ChatServerActionCreators = require('../actions/ChatServerActionCreators');
 

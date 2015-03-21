@@ -13,10 +13,10 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+var React = require('react');
 var MessageComposer = require('./MessageComposer.jsx');
 var MessageListItem = require('./MessageListItem.jsx');
 var MessageStore = require('../stores/MessageStore');
-var React = require('react');
 var ThreadStore = require('../stores/ThreadStore');
 
 function getStateFromStores() {
