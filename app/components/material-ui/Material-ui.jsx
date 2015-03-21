@@ -9,7 +9,7 @@ var AppCanvas = mui.AppCanvas;
 var IconButton = mui.IconButton;
 var LeftNav = require('../mixins/left-nav.jsx');
 
-require('../../styles/material-ui/Material-ui.less');
+require('./assets/styles/material-ui/Material-ui.less');
 
 var MaterialUI = React.createClass({
   mixins: [Router.State],

@@ -7,7 +7,7 @@ module.exports = React.createClass({
   render: function() {
     var style = {
       default: {
-        "padding": "2em"
+        "padding": "3em"
       }
     };
 
@@ -21,6 +21,12 @@ module.exports = React.createClass({
           </li>
           <li>
             <Link to="checkbox">Checkbox</Link>
+          </li>
+          <li>
+            <Link to="TodoApp">Todo Flux App</Link>
+          </li>
+          <li>
+            <Link to="ChatApp">Chat Flux App</Link>
           </li>
         </ul>
         <p>Or open the page that shows <Link to="readme">README.md</Link>.</p>
