@@ -76,4 +76,5 @@ Sources of enlightenment
 - https://github.com/chadpaulson/react-isomorphic-video-game-search
 - https://github.com/Izzimach/react-three
 - https://github.com/jlongster/blog
+- https://github.com/MandarinConLaBarba/flux-immutable-todomvc
 

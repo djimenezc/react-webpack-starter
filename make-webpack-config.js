@@ -14,6 +14,11 @@ module.exports = function(options) {
 
   var loaders = {
     "jsx": options.hotComponents ? ["react-hot-loader", "jsx-loader?harmony"] : "jsx-loader?harmony",
+    "js|jsx": {
+    loader: "babel-loader",
+    include: path.join(__dirname, "app"),
+    exclude: /node_modules/
+    },
     "txt": "raw-loader",
     "png|jpg|jpeg|gif|svg": "url-loader?limit=10000",
     "woff": "url-loader?limit=100000",

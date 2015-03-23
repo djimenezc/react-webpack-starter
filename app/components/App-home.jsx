@@ -26,6 +26,9 @@ module.exports = React.createClass({
             <Link to="TodoApp">Todo Flux App</Link>
           </li>
           <li>
+            <Link to="TodoImmutableApp">Todo Flux App w/ Immutable.js</Link>
+          </li>
+          <li>
             <Link to="ChatApp">Chat Flux App</Link>
           </li>
         </ul>

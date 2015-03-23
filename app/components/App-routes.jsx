@@ -15,6 +15,7 @@ var Checkbox = require('./checkbox/Checkbox.jsx');
 
 // Define Flux demo components
 var TodoApp = require('./flux/todo/components/TodoApp.jsx');
+var TodoImmutableApp = require('./flux/todo-immutable/components/TodoApp.jsx');
 var ChatApp = require('./flux/chat/components/ChatApp.jsx');
 
 // Define material-ui components.
@@ -58,6 +59,7 @@ var AppRoutes = (
     <Route name="home" handler={AppHome} />
     <Route name="checkbox" handler={Checkbox} />
     <Route name="TodoApp" handler={TodoApp} />
+    <Route name="TodoImmutableApp" handler={TodoImmutableApp} />
     <Route name="ChatApp" handler={ChatApp} />
 
     <Route name="material-ui" handler={MaterialUI}>
