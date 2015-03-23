@@ -50,3 +50,4 @@ $RECYCLE.BIN/
 build
 dist
 reference
+*.sqlite
